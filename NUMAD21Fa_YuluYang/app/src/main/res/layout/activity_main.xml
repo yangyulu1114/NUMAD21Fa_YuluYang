@@ -18,13 +18,13 @@
         android:id="@+id/aboutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="5dp"
+        android:background="@drawable/btn_selector"
+        android:padding="5dp"
         android:text="about"
-        android:textColor="@color/black">
-    </Button>
+        android:textColor="@color/black"></Button>
 
 </RelativeLayout>
