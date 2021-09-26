@@ -22,12 +22,14 @@
         android:id="@+id/clicky_clicky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CLICK"
+        android:padding="15dp"
+        android:text="ClickyClicky"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hello"
         app:layout_constraintBottom_toTopOf="@id/aboutBtn"
-        android:textSize="30sp" />
+        android:background="@drawable/btn_selector"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/aboutBtn"
@@ -42,7 +44,7 @@
         android:background="@drawable/btn_selector"
         android:padding="0dp"
         android:text="about"
-        android:onClick="onClickAbout"
+        android:onClick="onClick"
         android:textColor="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,11 +10,13 @@
         android:id="@+id/BtnA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="A"
+        app:layout_constraintBottom_toTopOf="@id/BtnD"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/BtnB"
-        app:layout_constraintBottom_toTopOf="@id/BtnD"
-        android:text="A" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/btn_selector"
+        android:onClick="onClickBtn" />
 
     <Button
         android:id="@+id/BtnB"
@@ -25,7 +27,9 @@
         app:layout_constraintRight_toLeftOf="@id/BtnC"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/BtnE"
-        android:text="B" />
+        android:text="B"
+        android:background="@drawable/btn_selector"
+        android:onClick="onClickBtn"/>
 
     <Button
         android:id="@+id/BtnC"
@@ -35,7 +39,9 @@
         app:layout_constraintLeft_toRightOf="@id/BtnB"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/BtnF"
-        android:text="C" />
+        android:text="C"
+        android:background="@drawable/btn_selector"
+        android:onClick="onClickBtn"/>
 
     <Button
         android:id="@+id/BtnD"
@@ -45,7 +51,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/BtnB"
         app:layout_constraintBottom_toTopOf="@id/text"
-        android:text="D" />
+        android:text="D"
+        android:background="@drawable/btn_selector"
+        android:onClick="onClickBtn"/>
 
     <Button
         android:id="@+id/BtnE"
@@ -56,7 +64,9 @@
         app:layout_constraintRight_toLeftOf="@id/BtnC"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/text"
-        android:text="E" />
+        android:text="E"
+        android:background="@drawable/btn_selector"
+        android:onClick="onClickBtn"/>
 
     <Button
         android:id="@+id/BtnF"
@@ -66,7 +76,9 @@
         app:layout_constraintLeft_toRightOf="@id/BtnB"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/text"
-        android:text="F" />
+        android:text="F"
+        android:background="@drawable/btn_selector"
+        android:onClick="onClickBtn"/>
 
     <TextView
         android:id="@+id/text"
@@ -76,6 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/BtnD"
+        android:background="@drawable/btn_selector"
         android:text="pressed: -"/>
 
 
