@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">NUMAD21Fa_YuluYang</string>
     <string name="about_toast">Name: Yulu Yang\nEmail: yang.yulu@northeastern.edu</string>
+    <string name="pressed_format">Pressed: %1$s</string>
+    <string name="hello">Hello World!</string>
+    <string name="clickbtn_text">Clicky Clicky</string>
+    <string name="about">about</string>
+    <string name="a_btn">A</string>
+    <string name="b_btn">B</string>
+    <string name="c_btn">C</string>
+    <string name="d_btn">D</string>
+    <string name="e_btn">E</string>
+    <string name="f_btn">F</string>
+    <string name="pressed_text">Pressed: - </string>
+
 </resources>

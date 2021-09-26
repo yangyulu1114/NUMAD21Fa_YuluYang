@@ -14,25 +14,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.aboutBtn :
-                onClickAbout();
-                break;
-            case R.id.clicky_clicky:
-                onClickyClicky();
-                break;
-        }
-    }
-    protected void onClickAbout() {
+
+    public void onClickAbout(View view) {
         // fix for hiding package name on xiaomi phone
         Toast toast = Toast.makeText(this, null, Toast.LENGTH_SHORT);
         toast.setText(getString(R.string.about_toast));
         toast.show();
     }
 
-    protected void onClickyClicky() {
-        Intent intent = new Intent(MainActivity.this, ClickyClicky.class);
+    public void onClickyClicky(View view) {
+        Intent intent = new Intent(MainActivity.this, ClickyClickyActivity.class);
         startActivity(intent);
     }
 }

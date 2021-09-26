@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ClickyClicky">
+    android:id="@+id/container">
 
     <Button
         android:id="@+id/BtnA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A"
+        android:text="@string/a_btn"
         app:layout_constraintBottom_toTopOf="@id/BtnD"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/BtnB"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/btn_selector"
-        android:onClick="onClickBtn" />
+        android:background="@drawable/btn_bg_normal" />
 
     <Button
         android:id="@+id/BtnB"
@@ -27,9 +26,8 @@
         app:layout_constraintRight_toLeftOf="@id/BtnC"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/BtnE"
-        android:text="B"
-        android:background="@drawable/btn_selector"
-        android:onClick="onClickBtn"/>
+        android:text="@string/b_btn"
+        android:background="@drawable/btn_bg_normal" />
 
     <Button
         android:id="@+id/BtnC"
@@ -39,9 +37,8 @@
         app:layout_constraintLeft_toRightOf="@id/BtnB"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/BtnF"
-        android:text="C"
-        android:background="@drawable/btn_selector"
-        android:onClick="onClickBtn"/>
+        android:text="@string/c_btn"
+        android:background="@drawable/btn_bg_normal" />
 
     <Button
         android:id="@+id/BtnD"
@@ -50,10 +47,9 @@
         app:layout_constraintTop_toBottomOf="@id/BtnA"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/BtnB"
-        app:layout_constraintBottom_toTopOf="@id/text"
-        android:text="D"
-        android:background="@drawable/btn_selector"
-        android:onClick="onClickBtn"/>
+        app:layout_constraintBottom_toTopOf="@id/status"
+        android:text="@string/d_btn"
+        android:background="@drawable/btn_bg_normal" />
 
     <Button
         android:id="@+id/BtnE"
@@ -63,10 +59,9 @@
         app:layout_constraintLeft_toRightOf="@id/BtnA"
         app:layout_constraintRight_toLeftOf="@id/BtnC"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/text"
-        android:text="E"
-        android:background="@drawable/btn_selector"
-        android:onClick="onClickBtn"/>
+        app:layout_constraintBottom_toTopOf="@id/status"
+        android:text="@string/e_btn"
+        android:background="@drawable/btn_bg_normal" />
 
     <Button
         android:id="@+id/BtnF"
@@ -75,21 +70,20 @@
         app:layout_constraintTop_toBottomOf="@id/BtnC"
         app:layout_constraintLeft_toRightOf="@id/BtnB"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/text"
-        android:text="F"
-        android:background="@drawable/btn_selector"
-        android:onClick="onClickBtn"/>
+        app:layout_constraintBottom_toTopOf="@id/status"
+        android:text="@string/f_btn"
+        android:background="@drawable/btn_bg_normal" />
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/BtnD"
-        android:background="@drawable/btn_selector"
-        android:text="pressed: -"/>
+        android:text="@string/pressed_text"
+        android:textSize="20sp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

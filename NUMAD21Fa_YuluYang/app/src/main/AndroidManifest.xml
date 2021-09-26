@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".ClickyClicky"
+            android:name=".ClickyClickyActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
