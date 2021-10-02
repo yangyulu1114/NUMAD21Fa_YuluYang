@@ -12,5 +12,6 @@
     <string name="e_btn">E</string>
     <string name="f_btn">F</string>
     <string name="pressed_text">Pressed: - </string>
+    <string name="link_collector">Link Collector</string>
 
 </resources>
