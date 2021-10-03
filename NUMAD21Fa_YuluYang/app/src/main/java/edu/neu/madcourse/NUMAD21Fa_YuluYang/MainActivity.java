@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -14,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.v("bush", android.util.Patterns.WEB_URL.matcher("google.com").matches() + "  1");
+        Log.v("bush", android.util.Patterns.WEB_URL.matcher("www.google.com").matches() + "  2");
+        Log.v("bush", android.util.Patterns.WEB_URL.matcher("http://google.com").matches() + " 3");
+        Log.v("bush", android.util.Patterns.WEB_URL.matcher("https://google.com").matches() + " 4");
+        Log.v("bush", android.util.Patterns.WEB_URL.matcher("http:\\google.com").matches() + " 5");
     }
 
     public void onClick(View view) {

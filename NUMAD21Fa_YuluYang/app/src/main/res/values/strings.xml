@@ -13,5 +13,8 @@
     <string name="f_btn">F</string>
     <string name="pressed_text">Pressed: - </string>
     <string name="link_collector">Link Collector</string>
-
+    <string name="empty_name">Failed: name can not be empty</string>
+    <string name="empty_url">Failed: url can not be empty</string>
+    <string name="invalid_url">Failed: Invalid Url, please re-enter</string>
+    <string name="succeed">Add Succeed</string>
 </resources>
