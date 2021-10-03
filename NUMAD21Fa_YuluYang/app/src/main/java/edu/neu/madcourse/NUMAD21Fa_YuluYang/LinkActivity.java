@@ -14,6 +14,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.Layout;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -107,10 +108,12 @@ public class LinkActivity extends AppCompatActivity implements ItemClickListener
     @Override
     public void onItemClick(LinkData data) {
         String url = data.getUrl();
-        if (!url.startsWith("http://")) {
+        if (!url.startsWith("http://") && !url.startsWith("https://")) {
             url = "http://" + url;
         }
+
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        Log.v("bush", Uri.parse(url) + "");
         browserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(browserIntent);
     }
