@@ -38,10 +38,4 @@ public class MainActivity extends AppCompatActivity {
         toast.setText(getString(R.string.about_toast));
         toast.show();
     }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        LinkManager.mLinkDataList.clear();
-    }
 }

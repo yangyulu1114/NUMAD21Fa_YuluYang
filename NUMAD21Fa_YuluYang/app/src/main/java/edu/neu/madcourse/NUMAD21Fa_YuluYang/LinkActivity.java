@@ -113,7 +113,6 @@ public class LinkActivity extends AppCompatActivity implements ItemClickListener
         }
 
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        Log.v("bush", Uri.parse(url) + "");
         browserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(browserIntent);
     }
