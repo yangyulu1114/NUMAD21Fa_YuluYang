@@ -17,4 +17,5 @@
     <string name="empty_url">Failed: url can not be empty</string>
     <string name="invalid_url">Failed: Invalid Url, please re-enter</string>
     <string name="succeed">Add Succeed</string>
+    <string name="locator">Locator</string>
 </resources>

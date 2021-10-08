@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent2 = new Intent(MainActivity.this, LinkActivity.class);
                 startActivity(intent2);
                 break;
+            case R.id.locator:
+                Intent intent3 = new Intent(MainActivity.this, LocatorActivity.class);
+                startActivity(intent3);
         }
     }
     private void onClickAbout() {
