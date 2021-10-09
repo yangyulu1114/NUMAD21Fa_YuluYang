@@ -20,8 +20,10 @@
 
     <Button
         android:id="@+id/clicky_clicky"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
         android:padding="15dp"
         android:text="@string/clickbtn_text"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,8 +34,10 @@
         android:onClick="onClick"/>
     <Button
         android:id="@+id/link_collector"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
         android:text="@string/link_collector"
         android:padding="15dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,8 +49,10 @@
 
     <Button
         android:id="@+id/locator"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
         android:text="@string/locator"
         android:padding="15dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,10 +64,10 @@
 
     <Button
         android:id="@+id/aboutBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/locator"
