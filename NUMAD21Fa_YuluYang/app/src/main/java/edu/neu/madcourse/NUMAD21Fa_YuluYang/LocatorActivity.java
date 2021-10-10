@@ -66,7 +66,11 @@ public class LocatorActivity extends AppCompatActivity implements LocationListen
             return;
         }
 
-        mLocationManager.requestLocationUpdates(locationProvider, 0, 100, this);
+        Location location = mLocationManager.getLastKnownLocation(locationProvider);
+        if (location != null) {
+            showLocation(location);
+        }
+        mLocationManager.requestLocationUpdates(locationProvider, 0, 0, this);
     }
 
     private void showLocation(Location location) {
