@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -33,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.locator:
                 Intent intent3 = new Intent(MainActivity.this, LocatorActivity.class);
                 startActivity(intent3);
+            case R.id.newBtn:
+                Intent intent4 = new Intent(MainActivity.this, WeatherForecastActivity.class);
         }
     }
     private void onClickAbout() {
