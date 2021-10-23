@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent3);
             case R.id.newBtn:
                 Intent intent4 = new Intent(MainActivity.this, WeatherForecastActivity.class);
+                startActivity(intent4);
         }
     }
     private void onClickAbout() {
