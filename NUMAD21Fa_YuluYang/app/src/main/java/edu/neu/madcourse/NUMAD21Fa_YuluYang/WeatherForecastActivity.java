@@ -19,6 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,7 +65,15 @@ public class WeatherForecastActivity extends AppCompatActivity implements HttpCa
 
     @Override
     public void onFail(Exception e) {
-        Log.v("bush", "", e);
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                mProgressBar.setVisibility(View.INVISIBLE);
+                Toast toast = Toast.makeText(WeatherForecastActivity.this, null, Toast.LENGTH_SHORT);
+                toast.setText(getString(R.string.request_failed));
+                toast.show();
+            }
+        });
     }
 
     public void onClick(View view) {
