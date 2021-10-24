@@ -3,6 +3,7 @@ package edu.neu.madcourse.NUMAD21Fa_YuluYang;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -112,6 +113,7 @@ public class WeatherForecastActivity extends AppCompatActivity implements HttpCa
         mWeatherAdapter = new WeatherAdapter(mWeatherList, mUnits);
         mRecyclerView.setAdapter(mWeatherAdapter);
         mRecyclerView.setLayoutManager(mLayoutManger);
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
         mRecyclerView.setVisibility(View.VISIBLE);
     }
     public void refreshUI() {
