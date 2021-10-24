@@ -18,7 +18,7 @@
     <string name="invalid_url">Failed: Invalid Url, please re-enter</string>
     <string name="succeed">Add Succeed</string>
     <string name="locator">Locator</string>
-    <string name="title">Search 7 Day Weather Forecast For a City</string>
+    <string name="title">Search Weather Forecast For a City</string>
     <string name="weather">Weather Forecast</string>
     <string name="request_failed">Http Request Failed, Please Retry!</string>
     <string-array name="cities">

@@ -31,9 +31,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.locator:
                 Intent intent3 = new Intent(MainActivity.this, LocatorActivity.class);
                 startActivity(intent3);
+                break;
             case R.id.newBtn:
                 Intent intent4 = new Intent(MainActivity.this, WeatherForecastActivity.class);
                 startActivity(intent4);
+                break;
+            default:
+                throw new UnsupportedOperationException();
         }
     }
     private void onClickAbout() {
