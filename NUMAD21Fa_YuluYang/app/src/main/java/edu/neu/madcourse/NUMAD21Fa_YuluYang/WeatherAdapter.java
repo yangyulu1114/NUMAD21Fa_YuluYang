@@ -35,7 +35,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherHolder>{
     @Override
     public void onBindViewHolder(@NonNull WeatherHolder holder, int position) {
         Weather currentItem = mLinkList.get(position);
-        String date = DateFormat.format("dd-MM-yyyy", currentItem.getTime() * 1000).toString();
+        String date = DateFormat.format("MM-dd-yyyy", currentItem.getTime() * 1000).toString();
         holder.mDate.setText(date);
         holder.mDes.setText(currentItem.getDes());
         String tempUnits = mUnits == "metric" ? "°C" : "°F";

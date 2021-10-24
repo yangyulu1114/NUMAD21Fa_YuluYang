@@ -93,7 +93,7 @@ public class WeatherForecastActivity extends AppCompatActivity implements HttpCa
         });
         builder.setNegativeButton("Cancel", null);
         AlertDialog dialog = builder.create();
-        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCanceledOnTouchOutside(false);
         dialog.show();
     }
 
