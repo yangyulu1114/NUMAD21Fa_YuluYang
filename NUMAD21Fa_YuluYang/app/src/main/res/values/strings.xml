@@ -4,7 +4,7 @@
     <string name="pressed_format">Pressed: %1$s</string>
     <string name="hello">Hello World!</string>
     <string name="clickbtn_text">Clicky Clicky</string>
-    <string name="about">about</string>
+    <string name="about">About</string>
     <string name="a_btn">A</string>
     <string name="b_btn">B</string>
     <string name="c_btn">C</string>
@@ -19,6 +19,7 @@
     <string name="succeed">Add Succeed</string>
     <string name="locator">Locator</string>
     <string name="title">Search 7 day weather forecast for a city</string>
+    <string name="weather">Weather Forecast</string>
     <string-array name="cities">
         <item>Boston</item>
         <item>San Francisco</item>

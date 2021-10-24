@@ -58,7 +58,7 @@ public class WeatherForecastActivity extends AppCompatActivity implements HttpCa
                 mRecyclerView.setVisibility(View.VISIBLE);
                 refreshUI();
             }
-        }, 500);
+        }, 400);
     }
 
     @Override
