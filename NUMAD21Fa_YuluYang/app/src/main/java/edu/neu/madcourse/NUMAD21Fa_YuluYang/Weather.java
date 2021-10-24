@@ -1,11 +1,11 @@
 package edu.neu.madcourse.NUMAD21Fa_YuluYang;
 
 public class Weather {
-    long time;
-    int minTemp;
-    int maxTemp;
-    String weather;
-    String des;
+    private long time;
+    private int minTemp;
+    private int maxTemp;
+    private String weather;
+    private String des;
 
     public Weather(long time, int minTemp, int maxTemp, String weather, String des) {
         this.time = time;

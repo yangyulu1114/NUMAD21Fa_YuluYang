@@ -2,6 +2,8 @@ package edu.neu.madcourse.NUMAD21Fa_YuluYang;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -14,25 +16,38 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherForecastActivity extends AppCompatActivity implements HttpCallback {
     private static final String KEY = "2c6d3f4272a216c7a2bfcbf8c0451d03";
+    private RecyclerView.LayoutManager mLayoutManger;
+    private RecyclerView mRecyclerView;
+    private WeatherAdapter mWeatherAdapter;
+    private List<Weather> mWeatherList = new ArrayList<>();
+    String mUnits = "metric";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_forecast);
+        createRecyclerView();
     }
 
     @Override
     public void onSuccess(String s) {
         Log.v("bush", s);
-        List<Weather> weatherList = JsonParseUtils.parseJSONwithJSONObject(s);
-        for(Weather weather : weatherList) {
-            Log.v("bush", weather.toString());
-        }
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mWeatherList.addAll(JsonParseUtils.parseJSONwithJSONObject(s));
+                for(Weather weather : mWeatherList) {
+                    Log.v("bush", weather.toString());
+                }
+                refreshUI();
+            }
+        });
     }
 
     @Override
@@ -50,17 +65,16 @@ public class WeatherForecastActivity extends AppCompatActivity implements HttpCa
             public void onClick(DialogInterface dialog, int which) {
                 Spinner spinner = dialogView.findViewById(R.id.spinner);
                 String city = spinner.getSelectedItem().toString();
-                String units = "metric";
                 RadioGroup radioGroup = dialogView.findViewById(R.id.radio_group);
                 int count = radioGroup.getChildCount();
                 for(int i = 1; i < count; i++) {
                     RadioButton rb = (RadioButton) radioGroup.getChildAt(i);
                     if (rb.isChecked()) {
-                        units = i == 1 ? "metric" : "imperial";
+                        mUnits = i == 1 ? "metric" : "imperial";
                         break;
                     }
                 }
-                sendWeatherRequest(city, units);
+                sendWeatherRequest(city, mUnits);
             }
         });
         builder.setNegativeButton("Cancel", null);
@@ -75,5 +89,17 @@ public class WeatherForecastActivity extends AppCompatActivity implements HttpCa
         double longitude = GeoLocations.getLongitude(city);
         String url = String.format(urlFormat, latitude, longitude, "minutely,hourly,alerts", KEY, units);
         HttpUtils.sendGetRequest(url, this);
+    }
+
+    private void createRecyclerView() {
+        mLayoutManger = new LinearLayoutManager(this);
+        mRecyclerView = findViewById(R.id.recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+        mWeatherAdapter = new WeatherAdapter(mWeatherList, mUnits);
+        mRecyclerView.setAdapter(mWeatherAdapter);
+        mRecyclerView.setLayoutManager(mLayoutManger);
+    }
+    public void refreshUI() {
+        mWeatherAdapter.notifyDataSetChanged();
     }
 }
