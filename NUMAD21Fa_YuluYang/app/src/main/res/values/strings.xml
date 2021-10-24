@@ -18,6 +18,13 @@
     <string name="invalid_url">Failed: Invalid Url, please re-enter</string>
     <string name="succeed">Add Succeed</string>
     <string name="locator">Locator</string>
-
+    <string name="title">Search 7 day weather forecast for a city</string>
+    <string-array name="cities">
+        <item>Boston</item>
+        <item>San Francisco</item>
+        <item>Los Angeles</item>
+        <item>New York</item>
+        <item>Seattle</item>
+    </string-array>
 
 </resources>

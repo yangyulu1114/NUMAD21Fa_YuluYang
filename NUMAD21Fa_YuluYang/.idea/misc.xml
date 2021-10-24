@@ -13,6 +13,8 @@
         <entry key="app/src/main/res/layout/activity_locator.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_weather_forecast.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_weather_history.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/configuration_dialog.xml" value="0.10643115942028986" />
         <entry key="app/src/main/res/layout/dialog.xml" value="0.11927083333333334" />
         <entry key="app/src/main/res/layout/item_link.xml" value="0.1" />
       </map>
