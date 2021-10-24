@@ -119,13 +119,14 @@ public class WeatherForecastActivity extends AppCompatActivity implements HttpCa
         mLayoutManger = new LinearLayoutManager(this);
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        mWeatherAdapter = new WeatherAdapter(mWeatherList, mUnits);
+        mWeatherAdapter = new WeatherAdapter();
         mRecyclerView.setAdapter(mWeatherAdapter);
         mRecyclerView.setLayoutManager(mLayoutManger);
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
         mRecyclerView.setVisibility(View.VISIBLE);
     }
     public void refreshUI() {
+        mWeatherAdapter.refreshData(mWeatherList, mUnits);
         mWeatherAdapter.notifyDataSetChanged();
     }
 }

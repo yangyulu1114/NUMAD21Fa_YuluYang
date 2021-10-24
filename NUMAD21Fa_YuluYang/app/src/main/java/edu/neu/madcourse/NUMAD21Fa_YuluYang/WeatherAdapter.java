@@ -9,20 +9,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherAdapter extends RecyclerView.Adapter<WeatherHolder>{
-    private final List<Weather> mLinkList;
-    private final String mUnits;
+    private List<Weather> mLinkList = new ArrayList<>();
+    private String mUnits = "metric";
 
-    public WeatherAdapter(List<Weather> linkList, String units) {
+    public void refreshData(List<Weather> linkList, String units) {
         mLinkList = linkList;
         mUnits = units;
-    }
-
-    public void refreshData(List<Weather> linkList) {
-        mLinkList.clear();
-        mLinkList.addAll(linkList);
     }
 
     @NonNull
